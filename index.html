@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eus">
 
 <head>
   <meta charset="utf-8">
@@ -23,6 +23,28 @@
   gtag('js', new Date());
 
   gtag('config', 'G-P0WE84M0S0');
+  function changeLanguage(select) {
+    var language = select.value;
+    document.querySelectorAll("[data-translate]").forEach(function(el) {
+      var key = el.getAttribute("data-translate");
+      if (translations[language][key]) {
+        el.innerHTML = translations[language][key];
+      }
+    });
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    var userLang = navigator.language || navigator.userLanguage;
+    if (userLang.startsWith('eus')) { // Example for Spanish
+      document.querySelector('#languageSelector select').value = 'eus';
+      changeLanguage(document.querySelector('#languageSelector select'));
+    }
+    if (userLang.startsWith('en')) { // Example for Spanish
+      document.querySelector('#languageSelector select').value = 'en';
+      changeLanguage(document.querySelector('#languageSelector select'));
+    }
+    // Add more conditions for other languages
+  });
+  
 </script>
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -48,16 +70,19 @@
   <!-- ======= Mobile nav toggle button ======= -->
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex flex-column justify-content-center">
 
     <nav id="navbar" class="navbar nav-menu">
+      <!-- nav-link scrollto active -->
       <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#hero" class="nav-link scrollto " ><i class="bx bx-file-blank"></i><span>Home</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
         <li><a href="#research" class="nav-link scrollto"><i class="bi bi-eyeglasses"></i> <span>Research</span></a></li>
         
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>My science communications</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Media</span></a></li>
         <li><a href="#contributions" class="nav-link scrollto"><i class="bi bi-github"></i> <span>Contributions</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
@@ -68,24 +93,36 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
+    <div id="languageSelector" style="position: absolute; top: 0; left: 0; padding: 10px;">
+      <select onchange="changeLanguage(this)">
+        <option value="en">English</option>
+        <option value="eus">Euskara</option>
+        <!-- Add more languages as needed -->
+      </select>
+    </div>
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Unai Elordi PhD</h1>
       <!-- -->
       <div class="row">
       <div class="col-md-6"> 
-      <p style="">Applying AI research to solve real-world problems</p>
-      <p style="">Passionate about science communication</p>
+      <p data-translate="h1_headline"><b>15</b> urte mundu errealeko arazoak <b>Adimen Artifizialaren</b> bitartez ikertzen eta aplikatzen</p>
+      <p data-translate="h2_headline"><b>Hizlari</b> eta <b>kolaboratzaile:</b></p>
+      <p data-translate="featured"><span class="typed" data-typed-items="Konferentzietan, Eitb-n, Naiz Irratian"></span></p>
+      
       <div class="social-links">
         <a href="https://twitter.com/uelordi_naiz" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/unai-elordi-hidalgo-ph-d-65439654" target="_blank"  class="linkedin"><i class="bx bxl-linkedin"></i></a>
         <a href="https://github.com/uelordi01" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://scholar.google.es/citations?user=f8WBAnsAAAAJ&hl=es" target="_blank"  class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="www.linkedin.com/in/unai-elordi-hidalgo-ph-d-65439654" target="_blank"  class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://scholar.google.es/citations?user=f8WBAnsAAAAJ&hl=es" target="_blank"  class="google-plus"><i class="bx bxl-google"></i></a>
+        <a href="https://stackoverflow.com/users/2995941/uelordi" target="_blank"  class="stack-overflow"><i class="bx bxl-stack-overflow"></i></a>
+      <a href="mailto:uelordicontact@gmail.com"><i class="bx bx-mail-send"></i></a>
       </div>
       <!-- <span class="typed" data-typed-items="featured in Eitb and Naiz"></span> -->
     </div>
     <div class="col-md-6"> 
       <iframe src="https://www.youtube.com/embed/re80K7ScMyE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+    <p>Kontaktua: <b>uelordicontact@gmail.com</b></p>
   </div>
       
     
@@ -379,7 +416,7 @@
             <div class="resume-item pb-0">
               <h4>Researcher</h4>
               <p><em>
-                Researcher and developer with more than 14 years of experience in Computer Vision and Artificial Ingelligence algorithms.
+                Researcher and developer with more than 15 years of experience in Computer Vision and Artificial Ingelligence algorithms.
                 His research lines are Deep Learning inference optimization, Face gesture/recognition/verification, DeepFake detection, Video surveillance aplications.</em></p>
               <ul>
                 <li>  Parque Científico y Tecnológico de Gipuzkoa, Paseo Mikeletegi 57,</li>
@@ -503,9 +540,21 @@
             </ul>
           </div>
         </div>
-
         <div class="row portfolio-container" >
-          <div class="col-lg-4 col-md-6 portfolio-item filter-radio filter-conf">
+          <div class="col-lg-4 col-md-6 portfolio-item  filter-conf">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/ianortasunasarean.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Teknologia azkar doa eta gogoetak harekin batera joan behar du</h4>
+                <div class="portfolio-links">
+                  <a href="https://www.berria.eus/bizigiro/teknologia-azkar-doa-eta-gogoetak-harekin-batera-joan-behar-du_2122433_102.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <div class="row portfolio-container" >
+          <div class="col-lg-4 col-md-6 portfolio-item filter-radio ">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/gambara_Ia_amorosa.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -1070,6 +1119,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="lang.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
