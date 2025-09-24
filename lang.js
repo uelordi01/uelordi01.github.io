@@ -6,6 +6,22 @@ var translations = {
       'h1_headline':'<b>15</b> years applying <b>AI & CV research</b> to solve real-world problems',
       'h2_headline':'<b>AI Speaker</b> featured in',
       'featured': '<span class="typed" data-typed-items="Conferences, Eitb, Naiz Irratia, "></span>',
+      "courses_subtitle": "Discover our courses on Artificial Intelligence and Computer Vision.",
+    "course_intro_title": "Introduction/Acclimatization",
+    "course_intro_text": "An ideal course for beginners who want to understand the basic concepts of AI, Machine Learning, and Computer Vision. No prior knowledge is required.",
+    "course_intro_feature1": "Fundamental concepts.",
+    "course_intro_feature2": "Practical applications.",
+    "course_intro_feature3": "Essential tools.",
+    "course_intermediate_title": "Advanced Courses",
+    "course_intermediate_text": "Designed for those who already have a foundation and want to deepen their knowledge in specific areas like Deep Learning, convolutional neural networks, and model optimization.",
+    "course_intermediate_feature1": "Model optimization.",
+    "course_intermediate_feature2": "Advanced Computer Vision.",
+    "course_intermediate_feature3": "Deployment techniques.",
+    "course_advanced_title": "Specialization",
+    "course_advanced_text": "Courses for experts looking to specialize in cutting-edge areas, such as forensic facial recognition, DeepFake detection, and deploying solutions on IoT.",
+    "course_advanced_feature1": "Facial recognition.",
+    "course_advanced_feature2": "Security and video analysis.",
+    "course_advanced_feature3": "Device integration."
       // Add more translations
     },
     'eus': {
@@ -14,7 +30,24 @@ var translations = {
       'menu_resume': 'kurrikuluma',
       'h1_headline':'<b>15</b> urte mundu errealeko arazoak <b>Adimen Artifizialaren</b> bitartez ikertzen eta aplikatzen',
       'h2_headline':'<b>Hizlari</b> eta <b>kolaboratzaile:</b>',
-      'featured':'<span class="typed" data-typed-items="Konferentzietan, Eitb-n, Naiz Irratian"></span>'
+      'featured':'<span class="typed" data-typed-items="Konferentzietan, Eitb-n, Naiz Irratian"></span>',
+       "courses_title": "Ikastaroak",
+    "courses_subtitle": "Ezagutu gure adimen artifizialeko eta ikusmen artifizialeko ikastaroak.",
+    "course_intro_title": "Sarrera/Aklimatazioa",
+    "course_intro_text": "AI, Machine Learning eta Ikusmen Artifizialaren oinarrizko kontzeptuak ulertu nahi dituzten hasiberrientzako ikastaro egokia. Aurretiko ezagutzarik ez da beharrezkoa.",
+    "course_intro_feature1": "Oinarrizko kontzeptuak.",
+    "course_intro_feature2": "Aplikazio praktikoak.",
+    "course_intro_feature3": "Funtsezko tresnak.",
+    "course_intermediate_title": "Sakontzeko Ikastaroak",
+    "course_intermediate_text": "Oinarri bat dutenentzat eta arlo zehatzetan sakondu nahi dutenentzat diseinatua, hala nola Deep Learning, sare neuronal konboluzionalak eta eredu-optimizazioa.",
+    "course_intermediate_feature1": "Eredu-optimizazioa.",
+    "course_intermediate_feature2": "Ikusmen Artifizial aurreratua.",
+    "course_intermediate_feature3": "Desplegu-teknikak.",
+    "course_advanced_title": "Espezializazioa",
+    "course_advanced_text": "Adituentzat, punta-puntako arloetan espezializatu nahi dutenentzat, esaterako, aurpegi-ezagutza forentsea, DeepFake-en detekzioa eta IoT-an irtenbideak hedatzea.",
+    "course_advanced_feature1": "Aurpegi-ezagutza.",
+    "course_advanced_feature2": "Segurtasuna eta bideo-analisia.",
+    "course_advanced_feature3": "Gailuen integrazioa."
       // Add more translations
     },
     // Add more languages
